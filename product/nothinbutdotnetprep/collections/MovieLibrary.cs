@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using nothinbutdotnetprep.infrastructure;
 
@@ -43,25 +44,26 @@ namespace nothinbutdotnetprep.collections
 
         public IEnumerable<Movie> all_movies_published_by_pixar()
         {
-            var pixarMovies = new List<Movie>();
-            foreach (var movie in movies)
-            {
-                if (movie.production_studio == ProductionStudio.Pixar)
-                    pixarMovies.Add(movie);
-            }
-            return pixarMovies;
+            return match_production_studio(ProductionStudio.Pixar);
         }
 
         public IEnumerable<Movie> all_movies_published_by_pixar_or_disney()
         {
-            var pixarAndDisney = all_movies_published_by_pixar() as List<Movie>;
+            var matchingMovies = new List<Movie>();
+            
+            matchingMovies.AddRange(match_production_studio(ProductionStudio.Pixar));
+            matchingMovies.AddRange(match_production_studio(ProductionStudio.Disney));
 
+            return matchingMovies;
+        }
+
+        private IEnumerable<Movie> match_production_studio(ProductionStudio studio)
+        {
             foreach (var movie in movies)
             {
-                if (movie.production_studio == ProductionStudio.Disney)
-                    pixarAndDisney.Add(movie);
+                if (movie.production_studio == studio) 
+                    yield return movie;
             }
-            return pixarAndDisney;
         }
 
         public IEnumerable<Movie> all_movies_not_published_by_pixar()
