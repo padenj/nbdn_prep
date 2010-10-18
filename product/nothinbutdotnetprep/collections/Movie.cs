@@ -2,7 +2,7 @@ using System;
 
 namespace nothinbutdotnetprep.collections
 {
-    public class Movie 
+    public class Movie  : IEquatable<Movie>
     {
         public string title { get; set; }
         public ProductionStudio production_studio { get; set; }
@@ -10,5 +10,27 @@ namespace nothinbutdotnetprep.collections
         public int rating { get; set; }
         public DateTime date_published { get; set; }
 
+        bool is_equal_to_non_null_instance_of(Movie other)
+        {
+            return this.title == other.title;
+        }
+
+        public bool Equals(Movie other)
+        {
+            if (other == null) return false;
+
+            return ReferenceEquals(this, other) || 
+                is_equal_to_non_null_instance_of(other);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as Movie);
+        }
+
+        public override int GetHashCode()
+        {
+            return title.GetHashCode();
+        }
     }
 }
