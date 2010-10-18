@@ -10,11 +10,14 @@ namespace nothinbutdotnetprep.collections
         public MovieLibrary(IList<Movie> list_of_movies)
         {
             this.movies = list_of_movies;
+
         }
 
         public IEnumerable<Movie> all_movies()
         {
-            return movies;
+            yield return movies[0];
+            foreach (var movie in movies) yield return movie;
+            yield return movies[0];
         }
 
         public void add(Movie movie)

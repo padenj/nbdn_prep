@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{EAA828F4-419B-4078-8EB6-533FBD86E800}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -54,20 +54,6 @@
     <None Include="build\local_properties.rb" />
     <None Include="build\local_properties.rb.customize" />
     <None Include="build\project.rb" />
-    <None Include="build\tools\Gallio\v3.1.397\Gallio.Echo.exe.config" />
-    <None Include="build\tools\Gallio\v3.1.397\Gallio.Echo.plugin" />
-    <None Include="build\tools\Gallio\v3.1.397\Gallio.Host.Elevated.exe.config" />
-    <None Include="build\tools\Gallio\v3.1.397\Gallio.Host.Elevated.x86.exe.config" />
-    <None Include="build\tools\Gallio\v3.1.397\Gallio.Host.exe.config" />
-    <None Include="build\tools\Gallio\v3.1.397\Gallio.Host.x86.exe.config" />
-    <None Include="build\tools\Gallio\v3.1.397\Gallio.plugin" />
-    <None Include="build\tools\Gallio\v3.1.397\Gallio.Reports.plugin" />
-    <None Include="build\tools\Gallio\v3.1.397\Gallio.xsd" />
-    <None Include="build\tools\Gallio\v3.1.397\NUnit\v2.5\Gallio.NUnitAdapter25.plugin" />
-    <None Include="build\tools\Gallio\v3.1.397\NUnit\v2.5\nunit.framework.dll.tdnet" />
-    <None Include="build\tools\Gallio\v3.1.397\TestGallioIntegration.bat" />
-    <None Include="build\tools\NUnit\nunit-console-x86.exe.config" />
-    <None Include="build\tools\NUnit\nunit-console.exe.config" />
     <None Include="build\tools\Rake\bin\rake" />
     <None Include="build\tools\Rake\filelist.rb" />
     <None Include="build\tools\Rake\lib\ruby\1.8\date.rb" />
@@ -202,73 +188,6 @@
     <Content Include="build\tools\7-Zip\7-Zip License.txt" />
     <Content Include="build\tools\7-Zip\7za.exe" />
     <Content Include="build\tools\7-Zip\copying.txt" />
-    <Content Include="build\tools\Castle\Castle.Core.dll" />
-    <Content Include="build\tools\Castle\Castle.Core.pdb" />
-    <Content Include="build\tools\Castle\Castle.Core.xml" />
-    <Content Include="build\tools\Castle\Castle.DynamicProxy.dll" />
-    <Content Include="build\tools\Castle\Castle.DynamicProxy.license.txt" />
-    <Content Include="build\tools\Castle\Castle.DynamicProxy.pdb" />
-    <Content Include="build\tools\Castle\Castle.DynamicProxy.xml" />
-    <Content Include="build\tools\Castle\Castle.DynamicProxy2.dll" />
-    <Content Include="build\tools\Castle\Castle.DynamicProxy2.pdb" />
-    <Content Include="build\tools\Castle\Castle.DynamicProxy2.xml" />
-    <Content Include="build\tools\Gallio\v3.1.397\Gallio License.txt" />
-    <Content Include="build\tools\Gallio\v3.1.397\Gallio.dll" />
-    <Content Include="build\tools\Gallio\v3.1.397\Gallio.Echo.exe" />
-    <Content Include="build\tools\Gallio\v3.1.397\Gallio.Host.Elevated.exe" />
-    <Content Include="build\tools\Gallio\v3.1.397\Gallio.Host.Elevated.x86.exe" />
-    <Content Include="build\tools\Gallio\v3.1.397\Gallio.Host.exe" />
-    <Content Include="build\tools\Gallio\v3.1.397\Gallio.Host.x86.exe" />
-    <Content Include="build\tools\Gallio\v3.1.397\Gallio.pdb" />
-    <Content Include="build\tools\Gallio\v3.1.397\Gallio.Reports.dll" />
-    <Content Include="build\tools\Gallio\v3.1.397\Gallio.Reports.pdb" />
-    <Content Include="build\tools\Gallio\v3.1.397\Gallio.Reports.xml" />
-    <Content Include="build\tools\Gallio\v3.1.397\Gallio.xml" />
-    <Content Include="build\tools\Gallio\v3.1.397\Gallio.XmlSerializers.dll" />
-    <Content Include="build\tools\Gallio\v3.1.397\NUnit\v2.5\addins\NUnit Addins Readme.txt" />
-    <Content Include="build\tools\Gallio\v3.1.397\NUnit\v2.5\Gallio.NUnitAdapter25.dll" />
-    <Content Include="build\tools\Gallio\v3.1.397\NUnit\v2.5\license.txt" />
-    <Content Include="build\tools\Gallio\v3.1.397\NUnit\v2.5\nunit.core.dll" />
-    <Content Include="build\tools\Gallio\v3.1.397\NUnit\v2.5\nunit.core.interfaces.dll" />
-    <Content Include="build\tools\Gallio\v3.1.397\NUnit\v2.5\nunit.framework.dll" />
-    <Content Include="build\tools\Gallio\v3.1.397\NUnit\v2.5\nunit.framework.xml" />
-    <Content Include="build\tools\Gallio\v3.1.397\NUnit\v2.5\nunit.mocks.dll" />
-    <Content Include="build\tools\Gallio\v3.1.397\NUnit\v2.5\nunit.util.dll" />
-    <Content Include="build\tools\Gallio\v3.1.397\NUnit\v2.5\Readme.txt" />
-    <Content Include="build\tools\Gallio\v3.1.397\NUnit\v2.5\Resources\NUnit.ico" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\Assembly.ico" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\Container.ico" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\Fixture.ico" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\Gallio.ControlPanel.ico" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\Gallio.Echo.ico" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\Gallio.Icarus.ico" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\Gallio.ico" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\Gallio.Utility.ico" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\MbUnit.ico" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\Test.ico" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\Unsupported.ico" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\xsl\Gallio-Report.ccnet-details-condensed.xsl" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\xsl\Gallio-Report.ccnet-details.xsl" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\xsl\Gallio-Report.common.xsl" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\xsl\Gallio-Report.html+xhtml.xsl" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\xsl\Gallio-Report.html-condensed.xsl" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\xsl\Gallio-Report.html.xsl" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\xsl\Gallio-Report.txt-common.xsl" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\xsl\Gallio-Report.txt-condensed.xsl" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\xsl\Gallio-Report.txt.xsl" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\xsl\Gallio-Report.xhtml-condensed.xsl" />
-    <Content Include="build\tools\Gallio\v3.1.397\Resources\xsl\Gallio-Report.xhtml.xsl" />
-    <Content Include="build\tools\NUnit\framework\nunit.framework.dll" />
-    <Content Include="build\tools\NUnit\framework\nunit.framework.xml" />
-    <Content Include="build\tools\NUnit\lib\log4net.dll" />
-    <Content Include="build\tools\NUnit\lib\nunit-console-runner.dll" />
-    <Content Include="build\tools\NUnit\lib\nunit.core.dll" />
-    <Content Include="build\tools\NUnit\lib\nunit.core.interfaces.dll" />
-    <Content Include="build\tools\NUnit\lib\nunit.util.dll" />
-    <Content Include="build\tools\NUnit\NUnit License.txt" />
-    <Content Include="build\tools\NUnit\nunit-console-x86.exe" />
-    <Content Include="build\tools\NUnit\nunit-console.exe" />
-    <Content Include="build\tools\NUnit\nunit.framework.dll" />
     <Content Include="build\tools\Rake\bin\msvcrt-ruby18.dll" />
     <Content Include="build\tools\Rake\bin\ruby.exe" />
     <Content Include="build\tools\Rake\lib\ruby\1.8\i386-mswin32\config.h" />
@@ -290,9 +209,6 @@
     <Content Include="build\tools\Rake\lib\ruby\1.8\i386-mswin32\util.h" />
     <Content Include="build\tools\Rake\lib\ruby\1.8\i386-mswin32\version.h" />
     <Content Include="build\tools\Rake\lib\ruby\1.8\i386-mswin32\win32\win32.h" />
-    <Content Include="build\tools\Rhino Mocks\Rhino Mocks License.txt" />
-    <Content Include="build\tools\Rhino Mocks\Rhino.Mocks.dll" />
-    <Content Include="build\tools\Rhino Mocks\Rhino.Mocks.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
