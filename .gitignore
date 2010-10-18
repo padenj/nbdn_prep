@@ -1,5 +1,3 @@
-bin
-obj
 *.chm
 _[Rr]e[Ss]harper.*
 *.csproj.user
@@ -16,3 +14,4 @@ local_properties.rb
 artifacts
 UpgradeLog.XML
 _UpgradeReport_Files
+*.orig
