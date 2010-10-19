@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="infrastructure\searching\AnonymousCriteria.cs" />
+    <Compile Include="infrastructure\searching\ComparableCriteriaFactory.cs" />
     <Compile Include="infrastructure\searching\Criteria.cs" />
     <Compile Include="collections\Genre.cs" />
     <Compile Include="collections\IsInGenre.cs" />
@@ -52,9 +53,10 @@
     <Compile Include="collections\ReadOnlySet.cs" />
     <Compile Include="infrastructure\EnumerableExtensions.cs" />
     <Compile Include="infrastructure\searching\CriteriaExtensions.cs" />
+    <Compile Include="infrastructure\searching\CriteriaFactory.cs" />
     <Compile Include="infrastructure\searching\NotCriteria.cs" />
     <Compile Include="infrastructure\searching\OrCriteria.cs" />
-    <Compile Include="infrastructure\searching\PropertyAccessor.cs" />
+    <Compile Include="infrastructure\searching\DefaultCriteriaFactory.cs" />
     <Compile Include="infrastructure\searching\Where.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
