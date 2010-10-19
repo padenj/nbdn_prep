@@ -1,4 +1,5 @@
 using System;
+using System.Linq.Expressions;
 
 namespace nothinbutdotnetprep.infrastructure.searching
 {
@@ -6,6 +7,7 @@ namespace nothinbutdotnetprep.infrastructure.searching
     {
         Func<ItemToFilter, PropertyType> accessor;
         CriteriaFactory<ItemToFilter, PropertyType> original;
+        private Func<ItemToFilter, PropertyType, int> CompareExpression { get { return (x, y) => accessor(x).CompareTo(y); } }
 
         public ComparableCriteriaFactory(Func<ItemToFilter, PropertyType> accessor, CriteriaFactory<ItemToFilter, PropertyType> original)
         {
@@ -15,15 +17,15 @@ namespace nothinbutdotnetprep.infrastructure.searching
 
         public Criteria<ItemToFilter> greater_than(PropertyType value)
         {
-            return new AnonymousCriteria<ItemToFilter>(x => accessor(x).CompareTo(value) > 0);
+            return GetCriteria(x => CompareExpression(x, value) > 0);
         }
 
         public Criteria<ItemToFilter> between(PropertyType start, PropertyType end)
         {
-            return new AnonymousCriteria<ItemToFilter>(x => accessor(x).CompareTo(start) >= 0 &&
-                accessor(x).CompareTo(end) <= 0);
+            return GetCriteria(x => CompareExpression(x, start) >= 0 &&
+                CompareExpression(x, end) <= 0);
         }
-
+        
         public Criteria<ItemToFilter> equal_to(PropertyType value_to_equal)
         {
             return original.equal_to(value_to_equal);
@@ -37,6 +39,11 @@ namespace nothinbutdotnetprep.infrastructure.searching
         public Criteria<ItemToFilter> not_equal_to(PropertyType value)
         {
             return original.not_equal_to(value);
+        }
+
+        public Criteria<ItemToFilter> GetCriteria(Predicate<ItemToFilter> criteria_predicate)
+        {
+            return original.GetCriteria(criteria_predicate);
         }
     }
 }
