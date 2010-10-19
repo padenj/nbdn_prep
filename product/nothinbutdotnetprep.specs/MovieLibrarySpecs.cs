@@ -5,6 +5,7 @@ using Machine.Specifications;
 using Machine.Specifications.DevelopWithPassion.Extensions;
 using Machine.Specifications.DevelopWithPassion.Rhino;
 using nothinbutdotnetprep.collections;
+using nothinbutdotnetprep.infrastructure.searching;
 using nothinbutdotnetprep.tests.utility;
 using nothinbutdotnetprep.infrastructure;
 
@@ -180,8 +181,9 @@ namespace nothinbutdotnetprep.specs
         {
             It should_be_able_to_find_all_movies_published_by_pixar = () =>
             {
-                var criteria = Where<Movie>.has_a(x => x.production_studio)
-                                           .equal_to(ProductionStudio.Pixar);
+
+                var criteria = Where<Movie>.has_a(x => x.date_published)
+                                           .equal_to(DateTime.Now);
 
                 var results = sut.all_movies().all_items_matching(criteria);
 
